@@ -51,7 +51,7 @@
         .phone-outer{
             position: absolute;
             right: 0; top: 0;
-            width: calc( 100% - ( #{$header-contact-height} + 4px ) * 2 );
+            width: calc( 100% - ( #{$header-contact-height} + 4px ) );
             height: $header-contact-height;
             background-color: $blue-300;
             
@@ -112,7 +112,7 @@
     }
 
     #navigation{
-        .hamburger{
+        #hamburger{
             position: absolute;
             right: 0; bottom: 0;
             width: calc( #{$header-height} - #{$header-contact-height} );

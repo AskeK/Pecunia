@@ -8,10 +8,8 @@ class HeaderHandler{
         this.lastscroll = 0; this.currentPosition = 0;
         
         window.addEventListener( 'scroll', this.onscroll.bind(this) );
-        let hamburgerElems = document.getElementsByClassName('hamburger');
-        for ( let item of hamburgerElems ) {
-            item.addEventListener( 'click', this.onhamburgerclick.bind(this) );
-        }
+        let hamburger = document.getElementById('hamburger');
+        hamburger.addEventListener( 'click', this.onhamburgerclick.bind(this) );
         
     }
     

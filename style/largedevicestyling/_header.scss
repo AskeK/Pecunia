@@ -7,7 +7,7 @@
         .contact{
             position: absolute;
             top: 0; right: 0;
-            width: calc( ( #{$header-contact-height} + 4px ) * 3 + 150px );
+            width: calc( ( #{$header-contact-height} + 4px ) * 1 + 150px );
             
             .fb{ display: inline-block!important; }
         }
@@ -48,7 +48,7 @@
                 }
             }
                 
-            .hamburger{ display: none; }
+            #hamburger{ display: none; }
         }
         
         .logo{
@@ -58,7 +58,7 @@
         }
         
         .phone-outer{
-            width: calc( 100% - ( #{$header-contact-height} + 4px ) * 3 )!important;
+            width: calc( 100% - ( #{$header-contact-height} + 4px ) * 1 )!important;
             
             .phone-inner{
                 width: 120px!important;

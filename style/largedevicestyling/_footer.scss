@@ -3,31 +3,34 @@
     footer{
         padding-top: 64px;
         padding-left: 96px;
+        .inner{ position: relative; width: auto; transform: none; }
+        .inner > * { margin-bottom: 48px; } 
     }
 }
 
 @media screen and ( min-width: 970px ) {
     footer{
-        padding-top: 48px;
-        padding-bottom: 64px;
+        position: relative;
+        height: 380px;
         
-        & > * { 
-            display: inline-block;
-            margin-left: 96px;
-            vertical-align: top;
-        }
-        
-        .menu{
-            position: relative;
-        }
-    }
-}
-
-@media screen and ( min-width: 1220px ) {
-    footer{
-        .menu{
+        .inner{
+            width: calc( 100% - 92px );
+            max-width: 1200px;
             position: absolute;
-            right: 24%;
+            top: 48px; left: 50%;
+            transform: translate(-50%, 0);
+
+            & > * { 
+                display: inline-block;
+                margin-left: 96px;
+                vertical-align: top;
+            }
+            
+            .menu{
+                position: absolute;
+                right: 64px;
+            }
+
         }
     }
 }

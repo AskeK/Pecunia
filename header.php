@@ -19,7 +19,7 @@
         <!-- Contact-->
         <div class="contact">
             <div class="icons">
-                <div class="icon fb">
+                <!--<div class="icon fb">
                     <svg>
                     <use xlink:href="#icon-facebook"></use>
                     </svg>
@@ -28,7 +28,7 @@
                     <svg viewBox="0 0 18 18">
                     <use xlink:href="#icon-linkedin"></use>
                     </svg>
-                </div>
+                </div>-->
                 <div class="icon mail">
                     <svg viewBox="0 0 18 18">
                     <use xlink:href="#icon-mail"></use>
@@ -55,7 +55,7 @@
         
         <!-- Nav -->
         <nav id="navigation">
-            <div class="hamburger">
+            <div id="hamburger">
                 <div class="hamburger-inner">
                     <div class="hmline hmline1"></div>
                     <div class="hmline hmline2"></div>

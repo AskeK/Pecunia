@@ -24,4 +24,7 @@ footer{
         width: 100%; height: auto;
         max-width: 320px;
     }
+    
+    .inner{ position: relative; width: auto; transform: none; }
+    .inner > * { margin-bottom: 48px; } 
 }
