@@ -16,3 +16,27 @@
         }
     }
 }
+
+@media screen and ( min-width: 900px ) {
+    section#content{
+        .content-inner{
+            padding-right: 96px;
+            padding-left: 96px;
+        }
+    }
+}
+
+@media screen and ( min-width: 1500px ) {
+    section#content{
+        .content-inner{
+            padding-right: 156px;
+            padding-left: 156px;
+        }
+    }
+}
+
+@media screen and ( min-width: 1800px ) {
+    section#content{
+        padding: 0 300px;
+    }
+}

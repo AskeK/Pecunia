@@ -1,0 +1,55 @@
+
+@media screen and ( min-width: $mobile-bp ) {
+    #content > .contacts{
+        width: calc( 100% - 400px )!important;
+        margin: 0 25px!important;
+        padding: 70px 0 8px 0!important;
+        height: auto;
+        margin-bottom: 32px;
+        
+        .title{ padding-left: 0; font-size: 26px!important; }
+    }
+    
+    #content{ min-height: calc( 100vh - 85px - 380px )!important; }
+    .contact-site .sidebar-inner{
+        top: calc(#{$header-height} + 94px)!important;
+    }
+}
+
+@media screen and ( min-width: 1000px ) {
+    #content > .contacts{
+        width: calc( 100% - 500px )!important;
+        margin: 0 75px!important;
+        padding: 110px 0 64px 0!important;
+        height: auto;
+        margin-bottom: 32px;
+        
+        .title{ padding-left: 0; font-size: 26px!important; }
+        .contact{
+            position: relative;
+            
+            & > * { 
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            .img{
+                width: 250px;
+                height: 250px;
+                .breakline{ display: none; }
+            }
+            
+            .info{
+                width: auto;
+                height: 100%;
+                margin-left: 16px;
+            }
+            
+            & > .breakline{
+                position: absolute;
+                display: block;
+                bottom: 0; left: 0; right: 0;
+            }
+        }
+    }
+}

@@ -31,7 +31,7 @@
                 </div>-->
                 <div class="icon mail">
                     <svg viewBox="0 0 18 18">
-                    <use xlink:href="#icon-mail"></use>
+                        <use xlink:href="#icon-mail"></use>
                     </svg>
                 </div>
             </div>
@@ -43,7 +43,9 @@
                         <use xlink:href="#icon-phone"></use>
                         </svg>
                     </div>
-                    <div class="number">+45 12 34 56 78</div>
+                    <a href="<?php echo 'tel://' . get_theme_mod( 'phone' ); ?>" class="number" style="text-decoration:none">
+                        <?php echo get_theme_mod( 'phone' ); ?>
+                    </a>
                 </div>
             </div>
         </div>

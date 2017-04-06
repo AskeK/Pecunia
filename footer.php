@@ -15,24 +15,12 @@
             </div>
 
             <div class="menu">
-                <div class="menu-elem">
-                    <a href="#">Om os</a>
-                </div>
-                <div class="menu-elem">
-                    <a href="#">Bogholderi</a>
-                </div>
-                <div class="menu-elem">
-                    <a href="#">Regnskab</a>
-                </div>
-                <div class="menu-elem">
-                    <a href="#">Økonomistyring</a>
-                </div>
-                <div class="menu-elem">
-                    <a href="#">Iværksætter</a>
-                </div>
-                <div class="menu-elem">
-                    <a href="#">Kontakt</a>
-                </div>
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'main-menu',
+                    'fallback_cb' => null,
+                    'container' => false,
+                    'menu_class' => 'content',
+                )); ?>
             </div>
         </div>
     </footer>

@@ -1,0 +1,63 @@
+
+
+
+#content > .contacts{
+    width: 100%;
+    height: auto;
+    padding: 32px 0 0 0!important;
+    
+    .title{
+        font-size: 24px;
+        padding-left: 32px;
+        margin-top: 40px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: 'Crimson Text';
+        text-transform: uppercase;
+    }
+    
+    .contact{
+        width: 100%;
+        height: auto;
+        margin-bottom: 32px;
+        
+        .img{
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        
+            .breakline{
+                position: absolute;
+                left: 0; bottom: 0;
+            }
+        }
+        
+        .info{
+            width: 100%;
+            height: auto;
+            padding: 24px 32px;
+            & > * { * { margin: 0; }}
+            
+            .position{
+                font-size: 13px;
+                margin-bottom: 0px;
+                font-family: "Quicksand"!important;
+            }
+            
+            .name{
+                font-size: 19px;
+                font-weight: bold;
+                margin-bottom: 32px;
+                font-family: $font-stack!important;
+            }
+            
+            .phone, .mail{
+                font-size: 13px;
+                margin-bottom: 2px;
+                font-family: "Quicksand"!important;
+            }
+        }
+    }
+}

@@ -15,6 +15,11 @@ footer{
         transition: $transition;
     }
     
+    .menu > *{
+        list-style-type: none;
+        padding: 0;
+    }
+    
     .menu a{
         color: #222;
         text-decoration: none;
