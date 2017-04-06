@@ -23,26 +23,32 @@
                 width: auto; height: 36px;
                 background-color: transparent;
                 font-size: 0;
+                display: block;
                 
-                .menu-elem{
-                    width: auto; height: 36px;
-                    padding: 0 24px;
+                &:before{display: none;}
+
+                .menu-item{
+                    width: auto;
                     display: inline-block;
-                    line-height: 36px;
-                    background-color: $blue-300;
                     border-right: 1px solid #555;
+                    background-color: $blue-300;
                     
                     a{
+                        display: block;
+                        height: 36px;
+                        line-height: 36px;
+                        padding: 0 24px;
                         font-size: 15px;
                         color: white;
                         text-decoration: none;
+                        border-bottom: none;
                     }
                     
                     &:hover{
                         background-color: lighten($blue-300, 2%);
                     }
                     
-                    &.active{
+                    &.current-menu-item{
                         background-color: $blue-700;
                     }
                 }
