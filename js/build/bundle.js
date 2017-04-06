@@ -63,11 +63,53 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// Article
+var Article = function () {
+
+    // Constructor
+    function Article() {
+        _classCallCheck(this, Article);
+
+        this.adaptSticky();
+        window.addEventListener('resize', this.adaptSticky);
+    }
+
+    // Adapt sticky
+
+
+    _createClass(Article, [{
+        key: 'adaptSticky',
+        value: function adaptSticky() {
+            var sidebar = document.getElementById('sidebar'),
+                content = document.getElementById('content');
+
+            sidebar.style.height = '100%';
+            if (window.innerWidth <= 640) return;
+            sidebar.style.height = content.clientHeight - 80 + 'px';
+        }
+    }]);
+
+    return Article;
+}();
+
+module.exports = Article;
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -151,16 +193,16 @@ var HeaderHandler = function () {
 module.exports = HeaderHandler;
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(5);
+var content = __webpack_require__(6);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(9)(content, {});
+var update = __webpack_require__(10)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -177,7 +219,7 @@ if(false) {
 }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -185,7 +227,7 @@ if(false) {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-__webpack_require__(1);
+__webpack_require__(2);
 
 // Main entry point for js
 
@@ -195,14 +237,14 @@ var Main =
 function Main() {
     _classCallCheck(this, Main);
 
-    this.headerHandler = new (__webpack_require__(0))();
-    this.articleHandler = new (__webpack_require__(12))();
+    this.headerHandler = new (__webpack_require__(1))();
+    this.articleHandler = new (__webpack_require__(0))();
 };
 
 new Main();
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -323,7 +365,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -337,9 +379,9 @@ function fromByteArray (uint8) {
 
 
 
-var base64 = __webpack_require__(3)
-var ieee754 = __webpack_require__(7)
-var isArray = __webpack_require__(8)
+var base64 = __webpack_require__(4)
+var ieee754 = __webpack_require__(8)
+var isArray = __webpack_require__(9)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2117,13 +2159,13 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(undefined);
+exports = module.exports = __webpack_require__(7)(undefined);
 // imports
 
 
@@ -2134,7 +2176,7 @@ exports.push([module.i, ".breakline {\n  position: relative;\n  width: 100%;\n  
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -2213,10 +2255,10 @@ function toComment(sourceMap) {
   return '/*# ' + data + ' */';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5).Buffer))
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -2306,7 +2348,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -2317,7 +2359,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -2354,7 +2396,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(10);
+	fixUrls = __webpack_require__(11);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -2613,7 +2655,7 @@ function updateLink(linkElement, options, obj) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 
@@ -2708,7 +2750,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 var g;
@@ -2733,45 +2775,6 @@ try {
 
 module.exports = g;
 
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// Article
-var Article = function () {
-
-    // Constructor
-    function Article() {
-        _classCallCheck(this, Article);
-
-        this.adaptSticky();
-        window.addEventListener('resize', this.adaptSticky);
-    }
-
-    // Adapt sticky
-
-
-    _createClass(Article, [{
-        key: 'adaptSticky',
-        value: function adaptSticky() {
-            var sidebar = document.getElementById('sidebar'),
-                content = document.getElementById('content');
-            sidebar.style.height = content.clientHeight + 'px';
-        }
-    }]);
-
-    return Article;
-}();
-
-module.exports = Article;
 
 /***/ })
 /******/ ]);
