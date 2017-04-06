@@ -152,7 +152,40 @@
             height: 100vh;
             transition: 300ms;
             transition-timing-function: cubic-bezier(.62, 0, .36, 1);
-            background-color: #222;
+            background-color: darken($blue-700,5);
+            padding: 0; margin: 0;
+            display: block;
+            list-style: none;
+            max-height: 100vh;
+            overflow-y: auto;
+
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0; left: 0; height: 100%; width: 5px;
+                background: linear-gradient(left, darken($blue-700,15), transparent);
+            }
+
+            .menu-item{
+
+                &:hover{
+                    background-color: rgba(white,.1);
+                }
+
+                &.current-menu-item{
+                    background-color:rgba(black,.1);
+                }
+
+                a{
+                    display: block;
+                    padding: 20px;
+                    color: white;
+                    text-decoration: none;
+                    border-bottom: 1px solid rgba(white,.1);
+                    font-family: 'Quicksand';
+                }
+            }
         }
     }
 
