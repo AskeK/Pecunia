@@ -1,0 +1,27 @@
+
+
+footer{
+    position: relative;
+    width: 100%; heigth: auto;
+    padding: 32px; 
+    background-color: lighten( $blue-500, 10% );
+    color: #eee;
+    font-family: 'Quicksand'!important;
+    font-size: 15px;
+    line-height: 1.7;
+    
+    & > * { 
+        margin-bottom: 48px; 
+        transition: $transition;
+    }
+    
+    .menu a{
+        color: #222;
+        text-decoration: none;
+    }
+    
+    .logo img{
+        width: 100%; height: auto;
+        max-width: 320px;
+    }
+}

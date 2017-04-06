@@ -1,0 +1,18 @@
+
+
+@media screen and ( min-width: $mobile-bp ) {
+    section#content {
+        display: inline-block;
+        width: 100%; height: auto;
+        
+        article{
+            display: inline-block;
+            width: calc( 100% - 350px );
+            padding-right: 32px;
+        }
+        
+        & > .breakline{ 
+            display: none;
+        }
+    }
+}

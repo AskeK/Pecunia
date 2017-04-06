@@ -1,0 +1,33 @@
+
+@media screen and ( min-width: $mobile-bp ) {
+    footer{
+        padding-top: 64px;
+        padding-left: 96px;
+    }
+}
+
+@media screen and ( min-width: 970px ) {
+    footer{
+        padding-top: 48px;
+        padding-bottom: 64px;
+        
+        & > * { 
+            display: inline-block;
+            margin-left: 96px;
+            vertical-align: top;
+        }
+        
+        .menu{
+            position: relative;
+        }
+    }
+}
+
+@media screen and ( min-width: 1220px ) {
+    footer{
+        .menu{
+            position: absolute;
+            right: 24%;
+        }
+    }
+}

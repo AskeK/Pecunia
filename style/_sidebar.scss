@@ -1,0 +1,32 @@
+
+
+#sidebar{
+    width: 100%;
+    height: auto;
+    font-family: $font-stack;
+    *{ font-family: inherit; }
+    
+    .sidebar-elem{
+        position: relative;
+        width: 100%;
+        height: 210px;
+        background-size: cover;
+        background-position: center;
+        
+        .title{
+            position: absolute;
+            left: 0; bottom: 14px;
+            width: 100%; height: 48px;
+            background-color: rgba(white, .85);
+            padding-left: 16px;
+            font-size: 19px;
+            color: black;
+            line-height: 48px;
+        }
+        
+        .breakline{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
