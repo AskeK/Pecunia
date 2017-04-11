@@ -5,6 +5,7 @@
 body{
     margin: 0;
     font-family: $font-stack;
+    &.loading *{ transition-duration: 0ms!important; }
     
     *{ 
         font-family: inherit;

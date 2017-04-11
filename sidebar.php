@@ -2,20 +2,22 @@
 
 <div id="sidebar">
     <div class="sidebar-inner">
-        <div class="sidebar-elem"
-           style="background-image:url(http://www.interfaceaccountancy.co.uk/assets/img/portfolio/book-keeping-london-mitcham.jpg)">
-            <div class="title">Bogholderi</div>
+
+        <?php
+        $pages = get_posts( array( 'post_type' => 'page' ));
+        foreach( $pages as $page ) :
+            $post_meta = get_post_meta( $page->ID );
+            if ( $post_meta['show_in_sidebar'] === null ||
+                 empty( $post_meta['show_in_sidebar'] ) ) continue;
+        ?>
+
+        <a href="<?php echo get_the_permalink( $page->ID ); ?>" class="sidebar-elem"
+           style="display: block; background-image:url(<?php echo wp_get_attachment_url( $post_meta['_thumbnail_id'][0] ); ?>)">
+            <div class="title"><?php echo $page->post_title; ?></div>
             <div class="breakline"><div class="overlays"></div></div>
-        </div>
-        <div class="sidebar-elem"
-           style="background-image:url(http://www.bj-regnskab.dk/Admin/Public/GetImage.ashx?width=722&height=500&Compression=75&image=%2FFiles%2FImages%2FBJ+regnskab%2Fboger.jpg)">
-            <div class="title">Regnskab</div>
-            <div class="breakline"><div class="overlays"></div></div>
-        </div>
-        <div class="sidebar-elem"
-           style="background-image:url(https://www.visma.dk/blog/files/2016/03/BlogMyVisma-1.jpg)">
-            <div class="title">Økonomistyring</div>
-            <div class="breakline"><div class="overlays"></div></div>
-        </div>
+        </a>
+
+        <?php endforeach; ?>
+
     </div>
 </div>
