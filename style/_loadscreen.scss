@@ -1,0 +1,14 @@
+
+.loaded{
+    width: auto!important;
+    height: auto!important;
+    overflow: auto!important;
+
+    #load-screen{
+        display: none!important;
+    }
+
+    #main-container{
+        display: block!important;
+    }
+}

@@ -14,6 +14,15 @@
         background-size: cover;
         background-position: center;
         
+        &:hover .overlay{ background-color: rgba(white, .2); }
+        .overlay{
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(white, 0);
+            transition: 0ms ease-in-out;
+        }
+
         .title{
             position: absolute;
             left: 0; bottom: 14px;

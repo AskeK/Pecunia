@@ -8,10 +8,30 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
-<body>
+<body id="body" style="
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;" >
+
     <?php get_template_part('svg'); ?>
     
-    <div id="main-container">
+    <div id="load-screen" style="
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: #fff;">
+
+        <div class="loader" style="
+           position: absolute; top: 50%; left: 50%;
+           transform: translate(-50%,-50%);
+           font-size: 40px; font-family: sans-serif;
+           color: #508ebe;">
+            Indlæser...
+        </div>
+
+    </div>
+
+    <div id="main-container" style="display: none;">
     
     <!-- Header -->
     <header id="topbar">

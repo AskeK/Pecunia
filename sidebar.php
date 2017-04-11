@@ -19,6 +19,7 @@
 
         <a href="<?php echo get_the_permalink( $page->ID ); ?>" class="sidebar-elem"
            style="display: block; background-image:url(<?php echo wp_get_attachment_url( $post_meta['_thumbnail_id'][0] ); ?>)">
+            <div class="overlay"></div>
             <div class="title"><?php echo $page->post_title; ?></div>
             <div class="breakline"><div class="overlays"></div></div>
         </a>
