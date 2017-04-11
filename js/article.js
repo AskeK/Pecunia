@@ -6,7 +6,7 @@ class Article {
     
     // Constructor
     constructor() {
-        this.adaptSticky();
+        setTimeout(() => { this.adaptSticky(); }, 300);
         window.addEventListener('resize', this.adaptSticky);
     }
     

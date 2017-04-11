@@ -82,9 +82,13 @@ var Article = function () {
 
     // Constructor
     function Article() {
+        var _this = this;
+
         _classCallCheck(this, Article);
 
-        this.adaptSticky();
+        setTimeout(function () {
+            _this.adaptSticky();
+        }, 300);
         window.addEventListener('resize', this.adaptSticky);
     }
 
