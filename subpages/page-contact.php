@@ -7,9 +7,15 @@
         <div class="title">Kontakt</div>
         
         <?php 
-        $coworkers = get_posts( array( 'post_type' => 'medarbejder' ));
+
+        $coworkers = get_posts( array(
+            'post_type' => 'medarbejder',
+            'orderby' => 'menu_order'
+        ));
+
         foreach( $coworkers as $coworker ) :
             $post_meta = get_post_meta( $coworker->ID ); 
+
         ?>
         
         <div class="contact">

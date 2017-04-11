@@ -36,3 +36,11 @@ function get_functions_part($fetch, $in = false){
     if(is_array($fetch)){foreach($fetch as $p){smamo_include_functions_part_if_exists($p,$in);}}
     else{smamo_include_functions_part_if_exists($fetch,$in);}
 }
+
+
+// Notices
+global $pagenow;
+if ( $pagenow == 'edit.php' ) {
+    function custom_admin_notice() { echo '<div class="tip"><p>Tip: Rækkefølgen af sider og medarbejdere kan ændres ved at "hive" i elementerne</p></div>'; }
+    add_action( 'admin_notices', 'custom_admin_notice' );
+}

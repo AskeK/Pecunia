@@ -1,4 +1,12 @@
 
+.page-not-found .content-inner {
+    font-family: 'Quicksand'!important;
+    font-size: 36px!important;
+    text-align: center!important;
+    min-height: calc( 100vh - #{$header-height} - 849px );
+    line-height: calc( 100vh - #{$header-height} - 849px );
+}
+
 section#content .content-inner {
     position: relative;
     display: block;

@@ -4,11 +4,17 @@
     <div class="sidebar-inner">
 
         <?php
-        $pages = get_posts( array( 'post_type' => 'page' ));
+
+        $pages = get_posts( array(
+            'post_type' => 'page',
+            'orderby' => 'menu_order',
+        ));
+
         foreach( $pages as $page ) :
             $post_meta = get_post_meta( $page->ID );
             if ( $post_meta['show_in_sidebar'] === null ||
                  empty( $post_meta['show_in_sidebar'] ) ) continue;
+
         ?>
 
         <a href="<?php echo get_the_permalink( $page->ID ); ?>" class="sidebar-elem"
