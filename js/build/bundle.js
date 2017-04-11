@@ -98,12 +98,24 @@ var Article = function () {
     _createClass(Article, [{
         key: 'adaptSticky',
         value: function adaptSticky() {
+
+            // Fields
             var sidebar = document.getElementById('sidebar'),
+                sidebarinner = document.getElementById('sidebar-inner'),
                 content = document.getElementById('content');
 
+            // Sets height
             sidebar.style.height = '100%';
             if (window.innerWidth <= 640) return;
             sidebar.style.height = content.clientHeight - 80 + 'px';
+
+            // Sets top
+            var top = window.innerHeight - sidebarinner.clientHeight - 32;
+            if (top > 0) {
+                sidebarinner.style.top = window.innerHeight / 2 - sidebarinner.clientHeight / 2 + 114 / 2 + 'px';
+            } else {
+                sidebarinner.style.top = top + 'px';
+            }
         }
     }]);
 

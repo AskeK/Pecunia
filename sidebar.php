@@ -1,7 +1,7 @@
 
 
 <div id="sidebar">
-    <div class="sidebar-inner">
+    <div class="sidebar-inner" id="sidebar-inner">
 
         <?php
 

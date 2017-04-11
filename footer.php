@@ -15,12 +15,12 @@
             </div>
 
             <div class="contact">
-                Pecunia Optimus ApS<br />
-                Jacob Appels Allé 89<br />
-                2770 Kastrup<br />
-                Tlf.: 12 34 56 78<br />
-                sje@pecunia-optimus.dk<br />
-                pecunia-optimus.dk
+                <?php echo get_theme_mod('company_name'); ?><br />
+                <?php echo get_theme_mod('address'); ?><br />
+                <?php echo get_theme_mod('city'); ?><br />
+                Tlf.: <?php echo get_theme_mod('phone'); ?><br />
+                <?php echo get_theme_mod('mail'); ?><br />
+                Copyright &copy; <?php echo get_theme_mod('company_name') . ' ' . date('Y'); ?>
             </div>
 
             <div class="menu">
