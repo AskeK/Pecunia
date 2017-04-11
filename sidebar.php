@@ -13,7 +13,7 @@
         foreach( $pages as $page ) :
             $post_meta = get_post_meta( $page->ID );
             if ( $post_meta['show_in_sidebar'] === null ||
-                 empty( $post_meta['show_in_sidebar'] ) ) continue;
+                 !in_array( 'checked', $post_meta['show_in_sidebar'] ) ) continue;
 
         ?>
 
