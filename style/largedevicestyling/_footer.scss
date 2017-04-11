@@ -17,12 +17,12 @@
             width: calc( 100% - 92px );
             max-width: 1200px;
             position: absolute;
-            top: 48px; left: 50%;
+            top: 48px; left: 40%;
             transform: translate(-50%, 0);
 
             & > * { 
                 display: inline-block;
-                margin-left: 96px;
+                margin-left: 128px;
                 vertical-align: top;
             }
             

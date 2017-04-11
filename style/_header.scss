@@ -102,12 +102,25 @@
         transition: 300ms;
         transition-timing-function: cubic-bezier(.62, 0, .36, 1);
 
-        .logo-img{
-            position: absolute;
-            top: 52%; left: 16px;
-            transform: translate(0,-50%);
-            max-width: 220px; width: 78%;
-            height: auto;
+        *{
+            fill: $blue-300;
+            display: inline-block;
+
+            &.icon svg{
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 50%; left: 20px;
+                transform: translate(0, -50%);
+            }
+
+            &.text svg{
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 50%; left: 74px;
+                transform: translate(0,-50%);
+            }
         }
     }
 

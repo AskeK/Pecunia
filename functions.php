@@ -41,6 +41,6 @@ function get_functions_part($fetch, $in = false){
 // Notices
 global $pagenow;
 if ( $pagenow == 'edit.php' ) {
-    function custom_admin_notice() { echo '<div class="tip"><p>Tip: Rækkefølgen af sider og medarbejdere kan ændres ved at "hive" i elementerne</p></div>'; }
+    function custom_admin_notice() { echo '<p>Tip: Rækkefølgen af sider og medarbejdere kan ændres ved at "hive" i elementerne</p>'; }
     add_action( 'admin_notices', 'custom_admin_notice' );
 }

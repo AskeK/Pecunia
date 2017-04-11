@@ -2,7 +2,16 @@
     <footer>
         <div class="inner">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . '/style/images/logo.png' ?>" />
+                <div class="icon">
+                    <svg viewBox="0 0 196 196">
+                        <use xlink:href="#logo-icon"></use>
+                    </svg>
+                </div>
+                <div class="text">
+                    <svg viewBox="0 0 196 196">
+                        <use xlink:href="#logo-text"></use>
+                    </svg>
+                </div>
             </div>
 
             <div class="contact">
