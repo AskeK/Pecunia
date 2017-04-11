@@ -49,11 +49,11 @@
                     <use xlink:href="#icon-linkedin"></use>
                     </svg>
                 </div>-->
-                <div class="icon mail">
+                <a href="mailto:<?php echo get_theme_mod('mail'); ?>" class="icon mail">
                     <svg viewBox="0 0 18 18">
                         <use xlink:href="#icon-mail"></use>
                     </svg>
-                </div>
+                </a>
             </div>
             
             <div class="phone-outer">
@@ -63,7 +63,9 @@
                         <use xlink:href="#icon-phone"></use>
                         </svg>
                     </div>
-                    <a href="<?php echo 'tel://' . get_theme_mod( 'phone' ); ?>" class="number" style="text-decoration:none">
+
+                    <?php $phonenum = implode( '', explode( ' ', get_theme_mod( 'phone' ) )); ?>
+                    <a href="<?php echo 'tel://' . $phonenum ?>" class="number" style="text-decoration:none">
                         <?php echo get_theme_mod( 'phone' ); ?>
                     </a>
                 </div>

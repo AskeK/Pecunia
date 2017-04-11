@@ -18,6 +18,7 @@
         transition: 300ms;
         transition-timing-function: cubic-bezier(.62, 0, .36, 1);
         float: right;
+        z-index: 10;
         
         .icons{
             position: absolute;
@@ -89,6 +90,7 @@
                     line-height: $header-contact-height;
                     font-weight: 300;
                     vertical-align: top;
+                    font-family: 'Quicksand';
                 }
             }
         }
