@@ -8,14 +8,15 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
-<body id="body" style="
+<body id="body" >
+    <!-- style="
     width: 100vw;
     height: 100vh;
-    overflow: hidden;" >
-
+    overflow: hidden;" -->
+    
     <?php get_template_part('svg'); ?>
     
-    <div id="load-screen" style="
+    <!--<div id="load-screen" style="
         position: fixed;
         top: 0; left: 0;
         width: 100%; height: 100%;
@@ -29,9 +30,9 @@
             Indlæser...
         </div>
 
-    </div>
+    </div>-->
 
-    <div id="main-container" style="display: none;">
+    <div id="main-container" style="">
     
     <!-- Header -->
     <header id="topbar">
@@ -95,6 +96,7 @@
                     <div class="hmline hmline3"></div>
                 </div>
             </div>
+            <div id="nav-close-btn">&times;</div>
             <?php wp_nav_menu(array(
                 'theme_location' => 'main-menu',
                 'fallback_cb' => null,

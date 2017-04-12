@@ -11,4 +11,4 @@ class Main {
         document.getElementById('body').classList.add('loaded');
     }
     
-} new Main();
+} window.onload = function() { new Main(); };

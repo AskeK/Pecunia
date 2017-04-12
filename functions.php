@@ -13,6 +13,10 @@ function initsettings() {
     ));
 }
 
+// Loads script
+add_action( 'wp_enqueue_scripts', 'enqueue' );
+function enqueue() { wp_enqueue_script( 'mainscript', get_template_directory_uri() . '/js/build/bundle.js' ); }
+
 // Custom types
 get_functions_part(array(
     'coworkers',

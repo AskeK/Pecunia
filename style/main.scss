@@ -32,6 +32,7 @@ body{
         right: $side-bar-width;
         #topbar{ right: $side-bar-width; }
         #navigation .content { right: 0; }
+        #navigation #nav-close-btn { right: 0; }
     }
 }
 

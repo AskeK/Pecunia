@@ -4,17 +4,23 @@ class HeaderHandler{
     
     /* ---- Constructor ---- */
     constructor( ) {
+        
         this.elem = document.getElementById('topbar');
         this.lastscroll = 0; this.currentPosition = 0;
         
         window.addEventListener( 'scroll', this.onscroll.bind(this) );
+        
         let hamburger = document.getElementById('hamburger');
         hamburger.addEventListener( 'click', this.onhamburgerclick.bind(this) );
+        
+        let navclose = document.getElementById('nav-close-btn');
+        navclose.addEventListener( 'click', this.onhamburgerclick.bind(this) );
         
     }
     
     /* ---- On Scroll ---- */
     onscroll( e ) {
+        this.elem = document.getElementById('topbar');
         if ( window.innerWidth >= 640 ) {
             this.elem.style.top = '0px';
             return;
