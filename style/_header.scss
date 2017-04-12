@@ -58,9 +58,10 @@
             
             .phone-inner{
                 position: absolute;
-                width: auto; height: 100%;
+                width: 100%; height: 100%;
                 left: 50%;
                 transform: translate(-50%, 0);
+                text-align: center;
                 
                 .phone-icon{
                     display: inline-block;
@@ -253,5 +254,23 @@
     }
 }
 
+@media screen and ( max-width: 320px ) {
+    #topbar .logo{
+        .icon svg{
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 50%; left: 16px;
+            transform: translate(0, -50%);
+        }
 
+        .text svg{
+            width: 145px;
+            height: 145px;
+            position: absolute;
+            top: 50%; left: 48px;
+            transform: translate(0,-50%);
+        }
+    }
+}
 
