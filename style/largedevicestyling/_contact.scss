@@ -14,6 +14,10 @@
     .contact-site .sidebar-inner{
         top: calc(#{$header-height} + 94px)!important;
     }
+    
+    .contact-site #sidebar{
+        margin-top: 98px;
+    }
 }
 
 @media screen and ( min-width: 1000px ) {
@@ -51,5 +55,10 @@
                 bottom: 0; left: 0; right: 0;
             }
         }
+    }
+    
+    
+    .contact-site #sidebar{
+        margin-top: 137px;
     }
 }
